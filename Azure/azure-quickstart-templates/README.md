@@ -3,12 +3,19 @@
 ## Check Point Security Management
 
 CloudGuard version R80.20
+
 BYOD
+
 Standard D3 v2
+
 virtualNetworkAddressPrefix 10.0.0.0/16
+
 subnet1Name Frontend
+
 subnet1Prefix 10.0.1.0/24
+
 subnet1StartAddress 10.0.1.10
+
 
 Connect to https://shell.azure.com/
 
