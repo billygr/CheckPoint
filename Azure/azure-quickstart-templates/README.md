@@ -1,4 +1,4 @@
- Azure Quickstart Templates for Check Point
+# Azure Quickstart Templates for Check Point
 
 ## Check Point Security Management
 
