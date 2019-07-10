@@ -3,12 +3,12 @@
 ## Check Point Security Management
 
 CloudGuard version R80.20
-*BYOD
-*Standard D3 v2
-*virtualNetworkAddressPrefix 10.0.0.0/16
-*subnet1Name Frontend
-*subnet1Prefix 10.0.1.0/24
-*subnet1StartAddress 10.0.1.10
+* BYOD
+* Standard D3 v2
+* virtualNetworkAddressPrefix 10.0.0.0/16
+* subnet1Name Frontend
+* subnet1Prefix 10.0.1.0/24
+* subnet1StartAddress 10.0.1.10
 
 Connect to https://shell.azure.com/
 
@@ -29,16 +29,16 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
 ## Check Point ClougGuard IaaS Single Gateway
 
 CloudGuard version R80.20
-*BYOD
-*Standard D3 v2
-*virtualNetworkName   vnet
-*virtualNetworkAddressPrefix  10.0.0.0/16
-*subnet1Name  Frontend
-*subnet1Prefix 10.0.1.0/24
-*subnet1StartAddress 10.0.1.10
-*subnet2Name Backend
-*subnet2Prefix 10.0.2.0/24
-*subnet2StartAddress 10.0.2.10
+* BYOD
+* Standard D3 v2
+* virtualNetworkName   vnet
+* virtualNetworkAddressPrefix  10.0.0.0/16
+* subnet1Name  Frontend
+* subnet1Prefix 10.0.1.0/24
+* subnet1StartAddress 10.0.1.10
+* subnet2Name Backend
+* subnet2Prefix 10.0.2.0/24
+* subnet2StartAddress 10.0.2.10
 
 ```bash
 $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
