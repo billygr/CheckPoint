@@ -14,7 +14,6 @@ rm /var/log/opt/CPrt-R80.30/log/cpsead.elg.?
 rm /var/log/opt/CPrt-R80.30/log/smartview-service.log.?
 rm /var/log/opt/CPrt-R80.30/log/smartview-service.log.??
 
-
 # LOG INDEXER
 rm /var/log/opt/CPrt-R80.30/log_indexer/log/log_indexer.elg.?
 
@@ -28,6 +27,11 @@ rm /var/log/opt/CPsuite-R80.30/fw1/log/fwd.elg.?
 # cores
 rm /var/log/dump/usermode/*
 rm /home/admin/last_dump.log
+
+# Delete indexes after 30 days
+find /var/log/opt/CPrt-R80.30/log_indexes/other* -type d -ctime +30 -exec rm -rf {} \;
+find /var/log/opt/CPrt-R80.30/log_indexes/audit* -type d -ctime +30 -exec rm -rf {} \;
+find /var/log/opt/CPrt-R80.30/log_indexes/smartevent* -type d -ctime +30 -exec rm -rf {} \;
 
 # messages/wtmp just a small gain 1MB
 #rm /var/log/messages.?
