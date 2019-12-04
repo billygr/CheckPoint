@@ -11,21 +11,21 @@ rm -f /var/log/opt/CPsuite-R80.30/fw1/log/sduu-2019*
 rm -f /var/log/opt/CPrt-R80.30/log/solr.log.??
 rm -f /var/log/opt/CPrt-R80.30/log/solr.log.?
 rm -f /var/log/opt/CPrt-R80.30/log/cpsead.elg.?
-rm -f  /var/log/opt/CPrt-R80.30/log/smartview-service.log.?
+rm -f /var/log/opt/CPrt-R80.30/log/smartview-service.log.?
 rm -f /var/log/opt/CPrt-R80.30/log/smartview-service.log.??
 
 # LOG INDEXER
 rm -f /var/log/opt/CPrt-R80.30/log_indexer/log/log_indexer.elg.?
 
 # CPM
-rm -f  /var/log/opt/CPsuite-R80.30/fw1/log/cpm.elg.??
-rm -f  /var/log/opt/CPsuite-R80.30/fw1/log/cpm.elg.?
+rm -f /var/log/opt/CPsuite-R80.30/fw1/log/cpm.elg.??
+rm -f /var/log/opt/CPsuite-R80.30/fw1/log/cpm.elg.?
 
 # FWD
-rm -f  /var/log/opt/CPsuite-R80.30/fw1/log/fwd.elg.?
+rm -f /var/log/opt/CPsuite-R80.30/fw1/log/fwd.elg.?
 
 # cores
-rm -f  /var/log/dump/usermode/*
+rm -f /var/log/dump/usermode/*
 rm -f /home/admin/last_dump.log
 
 # Delete indexes after 30 days
@@ -37,3 +37,4 @@ find /var/log/opt/CPrt-R80.30/log_indexes/smartevent* -type d -ctime +30 -exec r
 #rm /var/log/messages.?
 #rm /var/log/wtmp.?
 #rm /var/log/secure.?
+echo "Done"
