@@ -7,6 +7,8 @@
 ARG_1=$2
 
 # define API server
+# TE cloud API server is located on te.checkpoint.com, 127.0.0.1:18194 is the local one
+#TESERVER=te.checkpoint.com
 TESERVER=127.0.0.1:18194
 TEAPIKEY=""
 
@@ -69,11 +71,17 @@ upload() {
 }
 
 download() {
-echo "DOWNLOAD"
+  echo "DOWNLOAD"
 }
 
 quota() {
-echo "QUOTA"
+  echo "QUOTA"
+  [[ -z "$TEAPIKEY" ]] && { echo "Empty TEAPIKEY, probalby using local TE, exiting" ; exit 1; }
+
+  TEQRESP=$(curl_cli -k -s -H "Content-type: application/json" -H "Authorization: $TEAPIKEY" https://$TESERVER/tecloud/api/v1/file/quota)
+
+  # display response formated by jq
+  echo $TEQRESP | jq .
 }
 
 display_help() {
