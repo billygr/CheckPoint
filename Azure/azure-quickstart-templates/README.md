@@ -47,8 +47,9 @@ $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
 $location = Read-Host -Prompt "Enter the location (i.e. centralus)"
 $vmName = Read-Host -Prompt "Enter the VM Name"
 $password = Read-Host -Prompt "Enter the admin password"
-$sicKey = Read-Host -Prompt "Enter the One time key for Secure Internal Communication"
+$sic = Read-Host -Prompt "Enter the One time key for Secure Internal Communication"
 $adminPassword=ConvertTo-SecureString $password –asplaintext –force
+$sicKey=ConvertTo-SecureString $sic –asplaintext –force
 
 New-AzResourceGroup -Name $resourceGroupName -Location $location
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
