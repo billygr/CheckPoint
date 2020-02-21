@@ -1,5 +1,9 @@
 # Azure Quickstart Templates for Check Point
 
+## Azure Shell
+
+Connect to https://shell.azure.com/
+
 ## Check Point Security Management
 
 CloudGuard version R80.20
@@ -9,8 +13,6 @@ CloudGuard version R80.20
 * subnet1Name Frontend
 * subnet1Prefix 10.0.1.0/24
 * subnet1StartAddress 10.0.1.10
-
-Connect to https://shell.azure.com/
 
 ```bash
 $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
@@ -52,7 +54,8 @@ New-AzResourceGroup -Name $resourceGroupName -Location $location
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
   -TemplateUri https://raw.githubusercontent.com/billygr/CheckPoint/master/Azure/azure-quickstart-templates/gw/azuredeploy.json `
   -vmName $vmName `
-  -adminPassword $adminPassword
+  -adminPassword $adminPassword `
+  -sicKey $sicKey
 ```
 
 ### Notes
