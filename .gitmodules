@@ -1,0 +1,3 @@
+[submodule "CheckPoint_TE_queue"]
+	path = CheckPoint_TE_queue
+	url = https://github.com/billygr/CheckPoint_TE_queue
