@@ -8,6 +8,11 @@ rm -f $FWDIR/log/failed_tasks/*
 rm -f $FWDIR/log/failed_tasks/Other/*
 rm -f $FWDIR/log/failed_tasks/Policy_Installation/*
 rm -f $FWDIR/log/sduu-2019*
+rm -f $FWDIR/log/te_file_downloader.elg.?
+rm -f $FWDIR/log/api.elg.?
+# R81
+rm -f $FWDIR/log/vmware-vmsvc.?.log
+rm -f $FWDIR/log/gaia_api_server.log.?
 
 # SOLR / CPSEAD / SMARTVIEW
 rm -f $RTDIR/log/solr.log.??
