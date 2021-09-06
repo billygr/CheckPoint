@@ -1,6 +1,10 @@
 #!/bin/bash
 # sk83520 connectivity check
 # Initial URL https://community.checkpoint.com/t5/Security-Gateways/sk83520-how-to-check-connectivity-to-CP/m-p/31874/highlight/true#M2558
+# Run on the curl_cli -k  https://raw.githubusercontent.com/billygr/CheckPoint/master/sk83520.sh > sk83520.sh 
+# chmod +x sk83520.sh
+# ./sk83520.sh
+
 check_url () {
   result=" [ ERROR ]"
   name="$2 "
@@ -38,7 +42,7 @@ check_url 'http://avupdates.checkpoint.com/UrlList.txt' 'Traditional Anti-Virus,
 check_url 'http://sigcheck.checkpoint.com/Siglist2.txt' 'Download of signature updates'
 check_url 'http://secureupdates.checkpoint.com' 'Manage Security Gateways'
 check_url 'https://productcoverage.checkpoint.com/ProductCoverageService' 'Makes sure the machines contracts are up-to-date'
-check_url 'https://sc1.checkpoint.com/sc/images/checkmark.gif' 'Download of icons and screenshots from Check Point media storage s ervers'
+check_url 'https://sc1.checkpoint.com/sc/images/checkmark.gif' 'Download of icons and screenshots from Check Point media storage servers'
 check_url 'https://sc1.checkpoint.com/za/images/facetime/large_png/60342479_lrg.png' 'Download of icons and screenshots from Check Point media storage servers'
 check_url 'https://sc1.checkpoint.com/za/images/facetime/large_png/60096017_lrg.png' 'Download of icons and screenshots from Check Point media storage servers'
 check_url 'https://push.checkpoint.com' 'Push Notifications '
