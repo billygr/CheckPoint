@@ -29,6 +29,8 @@ check_url 'http://cws.checkpoint.com/URLF/SystemStatus/type/short' 'URL Filterin
 check_url 'http://cws.checkpoint.com/AntiVirus/SystemStatus/type/short' 'Virus Detection'
 check_url 'http://cws.checkpoint.com/Malware/SystemStatus/type/short' 'Bot Detection'
 check_url 'https://updates.checkpoint.com/' 'IPS Updates'
+check_url 'https://crl.godaddy.com/' 'CRL check godaddy Update Service uses it for revocation'
+check_url 'http://crl.globalsign.com/' 'CRL check globalsign CRL that updates service certificate uses'
 check_url 'http://dl3.checkpoint.com' 'Download Service Updates '
 check_url 'https://usercenter.checkpoint.com/usercenter/services/ProductCoverageService' 'Contract Entitlement '
 check_url 'https://usercenter.checkpoint.com/usercenter/services/BladesManagerService' 'Software Blades Manager Service'
