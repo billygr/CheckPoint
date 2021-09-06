@@ -5,12 +5,14 @@
 # chmod +x sk83520.sh
 # ./sk83520.sh
 
+source $CPDIR/tmp/.CPprofile.sh
+
 check_url () {
   result=" [ ERROR ]"
   name="$2 "
   while [ ${#name} -lt 74 ]; do name="$name."; done
   echo -en "$name "
-  response=$(curl_cli -LiskI $1 | grep "HTTP/1.1" | awk 'END { print }')
+  response=$(curl_cli --cacert $CPDIR/conf/ca-bundle.crt -LisI $1 | grep "HTTP/1.1" | awk 'END { print }')
   status=$(echo "${response}" | awk 'END { print $2 " " $3 " " $4}')
   status_code=$(echo ${response} | awk '{ print $2 }')
 if [ "${status_code}" != "200" ]; then
